@@ -1,5 +1,11 @@
 body{
-	background-color:cyan;
+	background:
+		linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+		linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+		linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+		linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+		background-size: 100px 100px;
+		background-color: #208590;
 	text-align:center;
 	color:#208590;
 	font-size:40px;
@@ -41,3 +47,57 @@ body{
 }
 
 
+.fact {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.fact img {
+    border: 5px solid #f8f8f8;
+	display: block;
+	width: 300px;
+	height: 300px;
+}
+.fact:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+
+.fact:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+
+
+@media screen and (max-width: 600px) , screen and (max-height: 700px) {
+	
+	body{
+	font-size: 20px;
+	}
+
+	h3 {
+		text-align: center;
+		padding-top: 350px;
+	}
+
+	
+}
