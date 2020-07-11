@@ -99,5 +99,10 @@ body{
 		padding-top: 350px;
 	}
 
+	#showFact1, #showFact2, #showFact3, #showFact4{
+
+		padding-top:100px;
+	}
+	
 	
 }
